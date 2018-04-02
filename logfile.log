@@ -1,0 +1,6 @@
+2018-04-02 14:13:54,971 INFO  Browser is started,Type is firefox 
+2018-04-02 14:13:55,696 INFO  [[FirefoxDriver: firefox on WINDOWS (808edf0d-5bb8-46dc-b441-4c015eafc3e9)] -> id: c1] is clicked. 
+2018-04-02 14:13:56,713 INFO  Dismiss the dialog 
+2018-04-02 14:13:56,742 INFO  The text in the dialog is:Press a button 
+2018-04-02 14:13:56,748 ERROR Actual alert text [Press a button] does not contains expected text [www]. 
+2018-04-02 14:13:56,749 ERROR Actual alert text [Press a button] does not contains expected text [abc]. 
