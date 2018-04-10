@@ -1,6 +1,9 @@
 package tedu.utils;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.fail;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -22,6 +25,7 @@ import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -33,7 +37,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 
 public class Utils {
 	public static WebDriver driver;
@@ -53,25 +56,6 @@ public class Utils {
 			Log.error("Issue in Taking Screenshot");
 		}
 	}
-	
-	/** 
-     * 执行js方法 
-     * 
-     * @param js
-     * @return void 
-     */  
-    public static void excuteJS(String js) {
-    	Log.info("excuteJS begin!");
-        try {
-        	Log.info("js:"+js);
-            ((JavascriptExecutor) driver).executeScript(js);  
-        } catch (Exception e) {  
-            e.printStackTrace();
-            Log.error(e.getMessage());
-        } finally{
-            Log.info("excuteJS end!");
-        }
-    }
 
     /** 
      * 执行js方法 
@@ -80,7 +64,7 @@ public class Utils {
      * @param arg1
      * @return Object 
      */  
-    public static Object excuteJS1(String js,Object... arg1) {
+    public static Object executeJS(String js,Object... arg1) {
     	Log.info("excuteJS begin!");
         try {
         	Log.info("js:"+js);
@@ -94,29 +78,7 @@ public class Utils {
             Log.info("excuteJS end!");
         }
     }
-    /** 
-     * 执行js方法 
-     * 
-     * @param js
-     * @param arg1
-     * @return Object 
-     */  
-    public static List<WebElement> excuteJS2(String js,Object... arg1) {
-    	Log.info("excuteJS begin!");
-        try {
-        	Log.info("js:"+js);
-        	Log.info("js arg1:"+arg1);
-			List<WebElement> lst = (List<WebElement>)
-			((JavascriptExecutor)driver).executeScript(js,arg1);
-			return lst;
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.error(e.getMessage());
-            return null;  
-        } finally{
-            Log.info("excuteJS end!");
-        }
-    }
+
 	/**
 	 * 等待固定时间
 	 */
@@ -134,9 +96,8 @@ public class Utils {
 	 * @throws Exception
 	 */
 	public static void waitForPageLoad(){
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		String js = "return document.readyState;";
-		while (!"complete".equals((String)jse.executeScript(js))) {
+		while (!"complete".equals((String)executeJS(js))) {
 			Log.warn("Page is loading……");
 			sleep(1000);
 		}
@@ -147,39 +108,62 @@ public class Utils {
 	 * @throws Exception
 	 */
 	public static void waitForPageLoad30(){
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		String js4 = "return document.readyState;";
 		boolean flag = false;
 		//最多等待30秒
 		for (int i=1;i<=30;i++){
-		 if("complete".equals((String)jse.executeScript(js4))) {
+		 if("complete".equals((String)executeJS(js4))) {
 			 flag=true;
 			 Log.info("Page is loaded in "+i+" seconds.");
 			 break;
 		 }
 		 sleep(1000);
 		}
-		if (!flag){
+		if (!flag){ 
+			fail();
 			Log.warn("Page is not loaded in 30 seconds.");
 		}
 	}
-	
-	/**
-	 * 自定义显示等待的方式等待页面加载完毕
-	 * @throws Exception
-	 */
-	public static void waitForPageLoad1(){	
-		(new WebDriverWait(driver, 80)).until(new ExpectedCondition<Boolean>() {
-		@Override 
-    	public Boolean apply(WebDriver dr) {
-		try {Boolean value = ((JavascriptExecutor) dr).executeScript("return document.readyState").equals("complete");
-		    	return value;
-		 } catch (Exception e) {return Boolean.FALSE;}
-	    }
-	    });
-		Log.info("The page is loaded.");
-	}
 
+	
+//	/**
+//	 * 自定义显式等待的方式等待页面加载完毕
+//	 * @throws Exception
+//	 */
+//	public static void waitForPageLoad1(){	
+//		WebDriverWait wait = new WebDriverWait(driver,Constants.EXPLICIT_WAIT);
+//
+//		wait.until(new ExpectedCondition<Boolean>() {
+//		@Override 
+//    	public Boolean apply(WebDriver dr) {
+//		try {
+//			return executeJS("return document.readyState").equals("complete");	    
+//		 } catch (Exception e) {return Boolean.FALSE;}
+//	    }
+//	    });
+//		Log.info("The page is loaded.");
+//	}
+
+	/**
+	 * 自定义显式等待，等待网页标题包含预期标题
+	 * @param title
+	 */
+	public static void explicitWaitTitle(final String title){
+		WebDriverWait wait = new WebDriverWait(driver,Constants.EXPLICIT_WAIT);
+        try{
+	        //通过判断 title内容等待搜索页面加载完毕
+	        wait.until(new ExpectedCondition<Boolean>() {
+        		@Override
+        		public Boolean apply(WebDriver d) { 
+        			return d.getTitle().toLowerCase().contains(title.toLowerCase()); 
+        		}
+        	});
+        }catch(TimeoutException te) {
+        	System.out.println(title);
+        	System.out.println(driver.getTitle());
+            throw new IllegalStateException("当前不是预期页面，当前页面title是：" + driver.getTitle());
+        }
+	}
 
 	/**
 	 * 通过JQuery方法等待JS执行结束
@@ -244,8 +228,10 @@ public class Utils {
 		       options.addArguments("--test-type");
 		       options.addArguments("enable-automation");
 		       options.addArguments("--disable-infobars");
-		       capabilities.setCapability("chrome.binary", Constants.CHROME_DRIVER);
+//		       capabilities.setCapability("chrome.binary", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+//		       capabilities.setCapability("chrome.binary", Constants.CHROME_DRIVER);
 		       capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		       System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER);
 		       //启动Chrome
 		       driver = new ChromeDriver(capabilities);
 			}else{
@@ -254,7 +240,10 @@ public class Utils {
 			Log.info("Browser is started,Type is "+browser);
 			//Maximize
 			driver.manage().window().maximize();
+			//Set Wait Time
 			driver.manage().timeouts().implicitlyWait(Constants.IMPLICITLY_WAIT, TimeUnit.SECONDS);
+			driver.manage().timeouts().pageLoadTimeout(Constants.IMPLICITLY_WAIT, TimeUnit.SECONDS);
+			driver.manage().timeouts().setScriptTimeout(Constants.IMPLICITLY_WAIT, TimeUnit.SECONDS);
 			return driver;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -403,7 +392,7 @@ public class Utils {
 		List<WebElement> frames = driver.findElements(By.tagName("frame"));
 		if (frames.size()>0){
 			boolean flag = false;//未找到目标Frame
-			for (int i=0;i<frames.size();i++){   //遍历所有Frame
+			for (int i=0;i<frames.size();i++){//遍历所有Frame
 				driver.switchTo().frame(i); //切换到编号为i的
 				//如果网页内容包含指定信息
 				if (driver.getPageSource().contains(pageSource)) 
@@ -831,7 +820,7 @@ public class Utils {
 			}
 		}
 	}
-	
+
 	public void verifyError(StringBuffer verificationErrors) throws Exception {
 	    String verificationErrorString = verificationErrors.toString();
 	    if (!"".equals(verificationErrorString)) {

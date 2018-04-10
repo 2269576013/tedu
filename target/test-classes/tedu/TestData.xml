@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<testLogin>
+		<username>user1</username>
+		<password>123456</password>
+	</testLogin>
+	<testLogin>
+		<username>user2</username>
+		<password>654321</password>
+	</testLogin>
+	<testLogin>
+		<username>user3</username>
+		<password>321654</password>
+	</testLogin>
+	<testSearch>
+		<keyword>a</keyword>
+		<result>6</result>
+	</testSearch>
+	<testStudent>
+		<studentID>7</studentID>
+		<studentName>jack</studentName>
+		<classNo>1</classNo>
+	</testStudent>
+	<testTeacher>
+		<teacherID>9</teacherID>
+		<teacherName>rose</teacherName>
+		<course>math</course>
+	</testTeacher>
+</data>

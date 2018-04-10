@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="tedu.tc.TestECShopAdvancedSearch" duration-ms="36316" started-at="2018-04-03T07:59:31Z" finished-at="2018-04-03T08:00:07Z">
+  <suite name="tedu.tc.TestECShopAdvancedSearch" duration-ms="43895" started-at="2018-04-08T10:01:17Z" finished-at="2018-04-08T10:02:01Z">
     <groups>
     </groups>
-    <test name="Command line test 266d3633-eb51-413c-9d6e-c7249100aa95" duration-ms="36316" started-at="2018-04-03T07:59:31Z" finished-at="2018-04-03T08:00:07Z">
+    <test name="Command line test cf65d629-ee80-4be1-9ed7-bc1ea42782ae" duration-ms="43895" started-at="2018-04-08T10:01:17Z" finished-at="2018-04-08T10:02:01Z">
       <class name="tedu.tc.TestECShopAdvancedSearch">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="beforeMethod" is-config="true" duration-ms="6873" started-at="2018-04-03T15:59:31Z" finished-at="2018-04-03T15:59:38Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="beforeMethod" is-config="true" duration-ms="8965" started-at="2018-04-08T18:01:17Z" finished-at="2018-04-08T18:01:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="f" duration-ms="4074" started-at="2018-04-03T15:59:38Z" data-provider="dp" finished-at="2018-04-03T15:59:42Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="f" duration-ms="5188" started-at="2018-04-08T18:01:26Z" data-provider="dp" finished-at="2018-04-08T18:01:32Z">
           <params>
             <param index="0">
               <value>
@@ -62,15 +62,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="afterMethod" is-config="true" duration-ms="134" started-at="2018-04-03T15:59:42Z" finished-at="2018-04-03T15:59:42Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="afterMethod" is-config="true" duration-ms="199" started-at="2018-04-08T18:01:32Z" finished-at="2018-04-08T18:01:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="beforeMethod" is-config="true" duration-ms="6354" started-at="2018-04-03T15:59:42Z" finished-at="2018-04-03T15:59:49Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="beforeMethod" is-config="true" duration-ms="8365" started-at="2018-04-08T18:01:32Z" finished-at="2018-04-08T18:01:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="f" duration-ms="6476" started-at="2018-04-03T15:59:49Z" data-provider="dp" finished-at="2018-04-03T15:59:55Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="f" duration-ms="7118" started-at="2018-04-08T18:01:40Z" data-provider="dp" finished-at="2018-04-08T18:01:47Z">
           <params>
             <param index="0">
               <value>
@@ -121,15 +121,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="afterMethod" is-config="true" duration-ms="142" started-at="2018-04-03T15:59:55Z" finished-at="2018-04-03T15:59:55Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="afterMethod" is-config="true" duration-ms="182" started-at="2018-04-08T18:01:47Z" finished-at="2018-04-08T18:01:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="beforeMethod" is-config="true" duration-ms="6740" started-at="2018-04-03T15:59:55Z" finished-at="2018-04-03T16:00:02Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="beforeMethod" is-config="true" duration-ms="7353" started-at="2018-04-08T18:01:47Z" finished-at="2018-04-08T18:01:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="f" duration-ms="5049" started-at="2018-04-03T16:00:02Z" data-provider="dp" finished-at="2018-04-03T16:00:07Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="f" duration-ms="5665" started-at="2018-04-08T18:01:55Z" data-provider="dp" finished-at="2018-04-08T18:02:00Z">
           <params>
             <param index="0">
               <value>
@@ -180,11 +180,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@177b3cd]" name="afterMethod" is-config="true" duration-ms="132" started-at="2018-04-03T16:00:07Z" finished-at="2018-04-03T16:00:07Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="afterMethod" is-config="true" duration-ms="177" started-at="2018-04-08T18:02:00Z" finished-at="2018-04-08T18:02:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- tedu.tc.TestECShopAdvancedSearch -->
-    </test> <!-- Command line test 266d3633-eb51-413c-9d6e-c7249100aa95 -->
+    </test> <!-- Command line test cf65d629-ee80-4be1-9ed7-bc1ea42782ae -->
   </suite> <!-- tedu.tc.TestECShopAdvancedSearch -->
 </testng-results>

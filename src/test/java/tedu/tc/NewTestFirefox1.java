@@ -1,16 +1,12 @@
 package tedu.tc;
 
-import static org.testng.Assert.assertTrue;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import tedu.utils.Log;
 import tedu.utils.Utils;
 
 public class NewTestFirefox1 {
@@ -27,7 +23,7 @@ public class NewTestFirefox1 {
 
   @BeforeMethod
   public void beforeMethod() {
-	  driver=Utils.openBrowser("firefox");
+	  driver=Utils.openBrowser("chrome");
   }
 
   @AfterMethod

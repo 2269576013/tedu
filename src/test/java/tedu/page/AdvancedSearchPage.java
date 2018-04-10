@@ -5,12 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class AdvancedSearchPage {
-	WebDriver driver;
-	String url = "http://localhost/ws/ecshop/upload/search.php?encode=YToyOntzOjM6ImFjdCI7czoxNToiYWR2YW5jZWRfc2VhcmNoIjtzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTUyMjc0MDQ3ODt9";
+import tedu.utils.Constants;
+import tedu.utils.Utils;
+
+public class AdvancedSearchPage extends BasePage{
 	
 	@FindBy(how = How.ID,using="keywords")
 	@CacheLookup
@@ -53,19 +53,16 @@ public class AdvancedSearchPage {
 	WebElement count;
 	
 	public AdvancedSearchPage(WebDriver driver){
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		super(driver);
+		super.url = Constants.ECSHOP_ADVANCED_SEARCH_URL;
 	}
 	
-	public void get(){
-		driver.get(url);
+	public AdvancedSearchPage(WebDriver driver,String title){
+		super(driver,title);
+		super.url = Constants.ECSHOP_ADVANCED_SEARCH_URL;
 	}
-	
-	public String getCount(){
-		return count.getText();
-	}
-	
-	public AdvancedSearchPage advancedSearch(String kw,
+
+	public SearchResultPage advancedSearch(String kw,
 			  String cg,
 			  String bd,
 			  String minp,
@@ -83,22 +80,12 @@ public class AdvancedSearchPage {
 		max_price.sendKeys(maxp);
 		new Select(goods_type).selectByVisibleText(ext);
 		if (ext.equals("精品手机")){
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			Utils.sleep(1000);
 			new Select(attr172).selectByVisibleText(d);
 			new Select(attr185).selectByVisibleText(cl);
 		}
 		Submit.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return new AdvancedSearchPage(driver);
+		Utils.sleep(2000);
+		return new SearchResultPage(driver,Constants.ECSHOP_SEARCH_RESULT_TITLE);
 	}
 }

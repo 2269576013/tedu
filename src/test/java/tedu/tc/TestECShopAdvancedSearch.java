@@ -2,19 +2,16 @@ package tedu.tc;
 
 import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import tedu.page.AdvancedSearchPage;
+import tedu.page.SearchResultPage;
 import tedu.utils.ReadFile;
 
-public class TestECShopAdvancedSearch {
-	WebDriver driver;
+public class TestECShopAdvancedSearch extends BaseTest{
 	AdvancedSearchPage asp;
+	SearchResultPage srp;
 	
   @Test(dataProvider = "dp")
   public void f(String kw,
@@ -26,26 +23,16 @@ public class TestECShopAdvancedSearch {
 		  String d,
 		  String cl,
 		  String expCount) {
+	  asp = new AdvancedSearchPage(driver);
 	  asp.get();
-	  asp = asp.advancedSearch(kw, cg, bd, minp, maxp, ext, d, cl);
-	  String actCount = asp.getCount();
+	  srp = asp.advancedSearch(kw, cg, bd, minp, maxp, ext, d, cl);
+	  String actCount = srp.getCount();
 		assertEquals(actCount,expCount);
   }
 
-  @BeforeMethod
-  public void beforeMethod() {
-	  driver = new FirefoxDriver();
-	  asp = new AdvancedSearchPage(driver);
-  }
-
-  @AfterMethod
-  public void afterMethod() {
-	  driver.quit();
-  }
-
-  @DataProvider
+  @DataProvider(parallel=true)
   public Object[][] dp() {
-    return ReadFile.getTestDataFromExcel("C:\\", "数据_ECShop_高级搜索.xls", "高级搜索");
+    return ReadFile.getTestDataFromExcel("C:\\", "数据_ECShop_高级搜索.xlsx", "高级搜索");
   }
 
 }
