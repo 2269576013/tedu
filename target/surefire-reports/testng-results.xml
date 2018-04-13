@@ -2,134 +2,45 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="tedu.tc.TestECShopAdvancedSearch" duration-ms="43895" started-at="2018-04-08T10:01:17Z" finished-at="2018-04-08T10:02:01Z">
+  <suite name="Suite" duration-ms="49159" started-at="2018-04-10T09:50:47Z" finished-at="2018-04-10T09:51:36Z">
     <groups>
     </groups>
-    <test name="Command line test cf65d629-ee80-4be1-9ed7-bc1ea42782ae" duration-ms="43895" started-at="2018-04-08T10:01:17Z" finished-at="2018-04-08T10:02:01Z">
+    <test name="Test1" duration-ms="49159" started-at="2018-04-10T09:50:47Z" finished-at="2018-04-10T09:51:36Z">
       <class name="tedu.tc.TestECShopAdvancedSearch">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="beforeMethod" is-config="true" duration-ms="8965" started-at="2018-04-08T18:01:17Z" finished-at="2018-04-08T18:01:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="f" duration-ms="5188" started-at="2018-04-08T18:01:26Z" data-provider="dp" finished-at="2018-04-08T18:01:32Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="beforeMethod" is-config="true" duration-ms="18876" started-at="2018-04-10T17:50:48Z" finished-at="2018-04-10T17:51:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[b]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[手机类型]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[三星]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[6000]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[请选择]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[1]]>
+                <![CDATA[Firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="afterMethod" is-config="true" duration-ms="199" started-at="2018-04-08T18:01:32Z" finished-at="2018-04-08T18:01:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="beforeMethod" is-config="true" duration-ms="8365" started-at="2018-04-08T18:01:32Z" finished-at="2018-04-08T18:01:40Z">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="f" duration-ms="7118" started-at="2018-04-08T18:01:40Z" data-provider="dp" finished-at="2018-04-08T18:01:47Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="beforeMethod" is-config="true" duration-ms="43602" started-at="2018-04-10T17:50:48Z" finished-at="2018-04-10T17:51:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[n]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[手机类型]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[联想]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[2000]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[精品手机]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[2008年06月]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[灰色]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[1]]>
+                <![CDATA[Firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="afterMethod" is-config="true" duration-ms="182" started-at="2018-04-08T18:01:47Z" finished-at="2018-04-08T18:01:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="beforeMethod" is-config="true" duration-ms="7353" started-at="2018-04-08T18:01:47Z" finished-at="2018-04-08T18:01:55Z">
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="beforeMethod" is-config="true" duration-ms="30521" started-at="2018-04-10T17:50:48Z" finished-at="2018-04-10T17:51:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="f" duration-ms="5665" started-at="2018-04-08T18:01:55Z" data-provider="dp" finished-at="2018-04-08T18:02:00Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="f" duration-ms="6486" started-at="2018-04-10T17:51:07Z" data-provider="dp" finished-at="2018-04-10T17:51:13Z">
           <params>
             <param index="0">
               <value>
@@ -180,11 +91,121 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@513cf0]" name="afterMethod" is-config="true" duration-ms="177" started-at="2018-04-08T18:02:00Z" finished-at="2018-04-08T18:02:01Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="afterMethod" is-config="true" duration-ms="425" started-at="2018-04-10T17:51:13Z" finished-at="2018-04-10T17:51:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="f" duration-ms="7563" started-at="2018-04-10T17:51:18Z" data-provider="dp" finished-at="2018-04-10T17:51:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[n]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[手机类型]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[联想]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[精品手机]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[2008年06月]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[灰色]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="afterMethod" is-config="true" duration-ms="488" started-at="2018-04-10T17:51:26Z" finished-at="2018-04-10T17:51:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="f" duration-ms="4399" started-at="2018-04-10T17:51:31Z" data-provider="dp" finished-at="2018-04-10T17:51:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[b]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[手机类型]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[三星]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[6000]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[请选择]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tedu.tc.TestECShopAdvancedSearch@4aa0ce]" name="afterMethod" is-config="true" duration-ms="200" started-at="2018-04-10T17:51:36Z" finished-at="2018-04-10T17:51:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- tedu.tc.TestECShopAdvancedSearch -->
-    </test> <!-- Command line test cf65d629-ee80-4be1-9ed7-bc1ea42782ae -->
-  </suite> <!-- tedu.tc.TestECShopAdvancedSearch -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
 </testng-results>
