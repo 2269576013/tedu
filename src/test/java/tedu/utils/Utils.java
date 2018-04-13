@@ -159,8 +159,7 @@ public class Utils {
         		}
         	});
         }catch(TimeoutException te) {
-        	System.out.println(title);
-        	System.out.println(driver.getTitle());
+        	Log.error("当前不是预期页面，当前页面title是：" +driver.getTitle());
             throw new IllegalStateException("当前不是预期页面，当前页面title是：" + driver.getTitle());
         }
 	}
