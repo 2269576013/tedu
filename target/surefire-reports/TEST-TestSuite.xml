@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="18.447" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="17.179" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="D:\MyEclipse 8.5_1\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin"/>
@@ -24,9 +24,9 @@
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows Vista"/>
-    <property name="classworlds.conf" value="D:\WorkSpaces\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf865950370248440594.tmp"/>
+    <property name="classworlds.conf" value="D:\WorkSpaces\.metadata\.plugins\org.maven.ide.eclipse\launches\m2conf3421565336047214980.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="D:\MyEclipse 8.5_1\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/MyEclipse 8.5_1/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin/client;D:/MyEclipse 8.5_1/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\wamp\bin\mysql\mysql5.5.24\\bin;C:\Program Files (x86)\Google\Chrome\Application\;C:\Program Files\Java\jdk1.7.0_80\jre\bin;C:\Program Files\Java\jdk1.7.0_80\bin;D:\apache-maven-3.2.5\bin;C:\Program Files (x86)\Git\cmd"/>
+    <property name="java.library.path" value="D:\MyEclipse 8.5_1\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/MyEclipse 8.5_1/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin/client;D:/MyEclipse 8.5_1/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\wamp\bin\mysql\mysql5.5.24\\bin;C:\Program Files (x86)\Google\Chrome\Application\;C:\Program Files\Java\jdk1.7.0_80\jre\bin;C:\Program Files\Java\jdk1.7.0_80\bin;D:\apache-maven-3.2.5\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\MyDrivers\DriverGenius;C:\Program Files (x86)\MyDrivers\DriverGenius\ksoft"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
     <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
@@ -57,7 +57,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase name="f" classname="tedu.tc.TestECShopAdvancedSearch" time="6.485"/>
-  <testcase name="f" classname="tedu.tc.TestECShopAdvancedSearch" time="7.563"/>
-  <testcase name="f" classname="tedu.tc.TestECShopAdvancedSearch" time="4.399"/>
+  <testcase name="f" classname="tedu.tc.TestECShopAdvancedSearch" time="6.912"/>
+  <testcase name="f" classname="tedu.tc.TestECShopAdvancedSearch" time="5.385"/>
+  <testcase name="f" classname="tedu.tc.TestECShopAdvancedSearch" time="4.882"/>
 </testsuite>
