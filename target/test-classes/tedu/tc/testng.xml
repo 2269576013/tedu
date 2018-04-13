@@ -5,8 +5,14 @@
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
-  <test name="Test1">
-  	<parameter name="browser" value="Firefox"></parameter>
+  <test name="TestFirefox">
+  	<parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="tedu.tc.TestECShopAdvancedSearch"/>
+    </classes>
+  </test>
+    <test name="TestIE">
+  	<parameter name="browser" value="firefox"/>
     <classes>
       <class name="tedu.tc.TestECShopAdvancedSearch"/>
     </classes>
