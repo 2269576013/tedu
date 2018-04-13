@@ -86,6 +86,6 @@ public class AdvancedSearchPage extends BasePage{
 		}
 		Submit.click();
 		Utils.sleep(2000);
-		return new SearchResultPage(driver,Constants.ECSHOP_SEARCH_RESULT_TITLE);
+		return new SearchResultPage(driver);
 	}
 }
